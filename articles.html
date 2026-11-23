@@ -314,7 +314,7 @@ footer{border-top:1.5px solid var(--ink);padding:28px 0;font-size:14.5px}
 .crumb{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;text-decoration:none;margin-bottom:10px}
 .crumb:hover{color:var(--blue)}
 .view[data-view^="case-"] .page-head .wrap{display:flex;flex-direction:column;align-items:flex-start}
-.view[data-view^="case-"] .page-head .eyebrow{order:5;margin-top:6px}
+.view[data-view^="case-"] .page-head .eyebrow{order:5;margin-top:26px}
 
 .filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 40px}
 .filters button{border:1.5px solid var(--ink);background:transparent;border-radius:99px;padding:10px 18px;font:600 14.5px var(--sans);cursor:pointer;color:var(--ink)}
@@ -920,6 +920,20 @@ footer a{color:var(--bg)}
 .hifi{grid-template-columns:.42fr 1fr;align-items:center}.hf-t h4{font-size:22px;letter-spacing:-.02em;margin-bottom:8px}.hf-t p{color:var(--muted);font-size:16.5px}
 .view[data-view="case-cerropoqui"] .chart-row{display:flex;flex-direction:column-reverse;gap:16px}.view[data-view="case-cerropoqui"] .chart-row .figure img{max-height:620px;object-fit:contain;background:#fff}
 
+/* before / after */
+.ba-fig{margin:18px 0 0}
+.ba{position:relative;aspect-ratio:2/1;max-width:100%;border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;background:#E8E8E8;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none}
+.ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(20,20,20,.3);pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;border:2px solid #fff;box-shadow:0 6px 18px rgba(20,20,20,.25);transition:transform .2s}
+.ba:hover .ba-knob{transform:translate(-50%,-50%) scale(1.06)}
+.ba:focus-within .ba-knob{outline:3px solid var(--lime);outline-offset:2px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;-webkit-appearance:none;appearance:none}
+.ba-tag{position:absolute;top:14px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--bg);padding:5px 12px;border-radius:99px;pointer-events:none}
+.ba-tag.l{left:14px}.ba-tag.r{right:14px}
+.ba-fig figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+@media (max-width:560px){.ba{aspect-ratio:4/3}.ba-knob{width:40px;height:40px}}
 /* lightbox */
 .zoomable{position:relative}
 .zoom-btn{position:absolute;top:12px;right:12px;z-index:3;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);background:rgba(255,255,255,.92);color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:.9;transition:transform .2s,background .2s,opacity .2s}
@@ -1023,7 +1037,7 @@ footer a{color:var(--bg)}
     </div>
     <div class="work-grid">
       <a class="card wide reveal" href="case-minsal" data-cat="strategy product">
-        <div class="media"><img src="assets/img/minsal.webp" alt="Teleinformes platform banner from the Digital Health team" loading="lazy" style="object-position:30% 50%"><span class="year">2025–</span>
+        <div class="media"><img src="assets/img/minsal-v2.webp" alt="Teleinformes platform banner from the Digital Health team" loading="lazy" style="object-position:30% 50%"><span class="year">2025–</span>
           <div class="tags"><span data-i18n="tag.public">Public sector</span><span>DesignOps</span><span data-i18n="tag.research">UX research</span></div></div>
         <div class="card-body"><div><h3 data-i18n="w2.title">Ministry of Health: diagnosing why digital health platforms weren't adopted — and the plan to fix it</h3>
           <p class="meta" data-i18n="w2.meta">Product &amp; Strategic Designer · Digital Health team · 7 platforms, 8 interviews, heuristic evaluation</p>
@@ -1128,7 +1142,7 @@ footer a{color:var(--bg)}
     </div>
     <div class="work-grid" id="allwork">
       <a class="card wide reveal" href="case-minsal" data-cat="strategy product">
-        <div class="media"><img src="assets/img/minsal.webp" alt="Teleinformes platform banner from the Digital Health team" loading="lazy" style="object-position:30% 50%"><span class="year">2025–</span>
+        <div class="media"><img src="assets/img/minsal-v2.webp" alt="Teleinformes platform banner from the Digital Health team" loading="lazy" style="object-position:30% 50%"><span class="year">2025–</span>
           <div class="tags"><span data-i18n="tag.public">Public sector</span><span>DesignOps</span><span data-i18n="tag.research">UX research</span></div></div>
         <div class="card-body"><div><h3 data-i18n="w2.title">Ministry of Health: diagnosing why digital health platforms weren't adopted — and the plan to fix it</h3>
           <p class="meta" data-i18n="w2.meta">Product &amp; Strategic Designer · Digital Health team · 7 platforms, 8 interviews, heuristic evaluation</p>
@@ -1183,7 +1197,7 @@ footer a{color:var(--bg)}
   </div>
 </section>
 <div class="wrap">
-  <div class="case-hero reveal"><img src="assets/img/minsal.webp" alt="Teleinformes platform banner from the Digital Health team"></div>
+  <div class="case-hero reveal"><img src="assets/img/minsal-v2.webp" alt="Teleinformes platform banner from the Digital Health team"></div>
   <div class="case-meta reveal">
     <div><h4 data-i18n="mc.m1h">Role</h4><p data-i18n="mc.m1">Product &amp; Strategic Designer, Digital Health team</p></div>
     <div><h4 data-i18n="mc.m2h">Scope</h4><p data-i18n="mc.m2">7 national platforms · teams, workflows and users</p></div>
@@ -1262,6 +1276,15 @@ footer a{color:var(--bg)}
         </div>
       </div>
       <div class="callout"><b>3.8</b><p data-i18n="mc.call">Teleinformes — the platform I lead design for — scored highest and was identified as the internal benchmark for its tested design, traceability and continuous communication.</p></div>
+      <h3 class="h3s" data-i18n="mc.bah">Teleinformes, before and after</h3>
+      <p data-i18n="mc.bap">From a single generic exam list to a workspace organised by status, where time elapsed, establishment and assigned professional are visible at a glance.</p>
+      <figure class="ba-fig"><div class="ba" style="--pos:50%">
+        <img class="ba-after" src="assets/img/teleinformes-after.webp" alt="After: ADA, Apoyo Diagnóstico Asistido. Reports grouped by status, with search by establishment and date" loading="lazy">
+        <div class="ba-before"><img src="assets/img/teleinformes-before.webp" alt="Before: the previous DART+ exam list, a single generic table" loading="lazy"></div>
+        <span class="ba-tag l" data-i18n="ba.b">Before</span><span class="ba-tag r" data-i18n="ba.a">After</span>
+        <span class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></span>
+        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
+      </div><figcaption data-i18n="mc.bac">Drag the handle to compare. Patient data in the previous version is blurred.</figcaption></figure>
     </div>
   </section>
 
@@ -1509,7 +1532,7 @@ footer a{color:var(--bg)}
     <h2 id="tcs5"><span>06</span><span data-i18n="tc.s5">Roadmap</span></h2>
     <div class="cs-body reveal">
       <p class="big" data-i18n="tc.rm0">A seven-month roadmap designed to ship value early: an MVP tested with real users before the full launch.</p>
-      <figure class="figure"><img src="assets/img/tgr-roadmap.webp" alt="TGR roadmap: Stage 1 research (2 months) and Stage 2 implementation (5 months), planned week by week across 28 sprints" loading="lazy"><figcaption data-i18n="tc.rmc">Roadmap: Stage 1 · research (2 months) and Stage 2 · implementation (5 months), planned week by week across 28 sprints.</figcaption></figure><div class="roadmap">
+      <figure class="figure"><img src="assets/img/tgr-roadmap.webp" alt="TGR roadmap: Stage 1 research (2 months) and Stage 2 implementation (5 months), planned week by week across 28 sprints" loading="lazy"><figcaption data-i18n="tc.rmc">Roadmap: Stage 1 · research (2 months) and Stage 2 · implementation (5 months), planned week by week across 28 sprints. Co-designed with project lead Iliana Medina.</figcaption></figure><div class="roadmap">
         <div class="rm"><span class="when" data-i18n="tc.w1">Apr – May</span><h4 data-i18n="tc.rm1">UX research</h4><p data-i18n="tc.rm1p">Stakeholder kickoff, lean research, personas, to-be journeys, benchmark, look &amp; feel, report.</p></div>
         <div class="rm"><span class="when" data-i18n="tc.w2">Jun – Jul</span><h4 data-i18n="tc.rm2">MVP definition</h4><p data-i18n="tc.rm2p">MVP features, backlog prioritisation, high-fidelity wireframes and prototypes, first build.</p></div>
         <div class="rm"><span class="when" data-i18n="tc.w3">Aug</span><h4 data-i18n="tc.rm3">Pilot</h4><p data-i18n="tc.rm3p">Content inventory and controlled MVP launch with selected users; structured feedback.</p></div>
@@ -2674,7 +2697,8 @@ footer a{color:var(--bg)}
   Object.assign(ES,{"ca.hf3": "Un sistema, dos experiencias", "ca.hf4": "El mismo UI kit da vida al sitio público de reservas en mobile y a la plataforma interna para empresas en desktop, que se muestra al inicio de este caso.", "ca.rmc": "Roadmap V1: 13 sprints semanales, desde la landing hasta el portal privado."});
   Object.assign(ES,{"rs.mv2": "oct 2022 – jul 2023 · ene 2024 – abr 2025"});
   Object.assign(ES,{"ap.ai3":"Mira cómo uso la IA en cada etapa"});
-  Object.assign(ES,{"tc.rmc":"Roadmap: Etapa 1 · investigación (2 meses) y Etapa 2 · implementación (5 meses), planificadas semana a semana en 28 sprints."});
+  Object.assign(ES,{"tc.rmc":"Roadmap: Etapa 1 · investigación (2 meses) y Etapa 2 · implementación (5 meses), planificadas semana a semana en 28 sprints. Diseñado en conjunto con la encargada de proyecto, Iliana Medina."});
+  Object.assign(ES,{"mc.bah":"Teleinformes, antes y después","mc.bap":"De una lista genérica de exámenes a un espacio de trabajo organizado por estado, donde el tiempo transcurrido, el establecimiento y el profesional asignado se ven de un vistazo.","ba.b":"Antes","ba.a":"Después","mc.bac":"Desliza para comparar. Los datos de pacientes de la versión anterior están difuminados."});
   const TITLES = {home:'', work:'Work', 'case-minsal':'Ministry of Health case', 'case-tgr':'National Treasury case', 'case-redsalud':'MiRedSalud case', 'case-futurium':'Futurium case', 'case-conagenda':'ConAgenda case', 'case-cerropoqui':'Cerro Poqui case', approach:'Approach', artefacts:'Artefacts', articles:'Articles', about:'About', contact:'Contact'};
   const nodes=[...document.querySelectorAll('[data-i18n]')];
   const EN={}; nodes.forEach(n=>{ if(!(n.dataset.i18n in EN)) EN[n.dataset.i18n]=n.innerHTML });
@@ -2795,6 +2819,9 @@ footer a{color:var(--bg)}
       },true);
     }).catch(()=>{});
   }
+
+  // before / after sliders
+  document.querySelectorAll('.ba').forEach(b=>{ const r=b.querySelector('.ba-range'); const set=()=>b.style.setProperty('--pos',r.value+'%'); r.addEventListener('input',set); set(); });
 
   // enlarge project images
   const lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('p'), lbClose=lb.querySelector('.lb-close');
