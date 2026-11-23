@@ -2723,6 +2723,10 @@ footer a{color:var(--bg)}
   const header=document.querySelector('header');
   addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20),{passive:true});
   mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  // close the mobile menu when tapping outside it or pressing Escape
+  const closeMenu=()=>{ if(menu.classList.contains('open')){ menu.classList.remove('open'); mb.setAttribute('aria-expanded','false'); } };
+  document.addEventListener('click',e=>{ if(!menu.contains(e.target)&&!mb.contains(e.target)) closeMenu(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&menu.classList.contains('open')){ closeMenu(); mb.focus(); } });
 
   // filters on work page
   const fbtns=[...document.querySelectorAll('[data-filter]')];
