@@ -1280,11 +1280,11 @@ footer a{color:var(--bg)}
       <p data-i18n="mc.bap">From a single generic exam list to a workspace organised by status, where time elapsed, establishment and assigned professional are visible at a glance.</p>
       <figure class="ba-fig"><div class="ba" style="--pos:50%">
         <img class="ba-after" src="assets/img/teleinformes-after.webp" alt="After: ADA, Apoyo Diagnóstico Asistido. Reports grouped by status, with search by establishment and date" loading="lazy">
-        <div class="ba-before"><img src="assets/img/teleinformes-before.webp" alt="Before: the previous DART+ exam list, a single generic table" loading="lazy"></div>
+        <div class="ba-before"><img src="assets/img/teleinformes-before-v2.webp" alt="Before: the previous DART+ exam list, a single generic table" loading="lazy"></div>
         <span class="ba-tag l" data-i18n="ba.b">Before</span><span class="ba-tag r" data-i18n="ba.a">After</span>
         <span class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></span>
         <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
-      </div><figcaption data-i18n="mc.bac">Drag the handle to compare. Patient data in the previous version is blurred.</figcaption></figure>
+      </div><figcaption data-i18n="mc.bac">Drag the handle to compare. All patient data shown is fictitious.</figcaption></figure>
     </div>
   </section>
 
@@ -2698,7 +2698,7 @@ footer a{color:var(--bg)}
   Object.assign(ES,{"rs.mv2": "oct 2022 – jul 2023 · ene 2024 – abr 2025"});
   Object.assign(ES,{"ap.ai3":"Mira cómo uso la IA en cada etapa"});
   Object.assign(ES,{"tc.rmc":"Roadmap: Etapa 1 · investigación (2 meses) y Etapa 2 · implementación (5 meses), planificadas semana a semana en 28 sprints. Diseñado en conjunto con la encargada de proyecto, Iliana Medina."});
-  Object.assign(ES,{"mc.bah":"Teleinformes, antes y después","mc.bap":"De una lista genérica de exámenes a un espacio de trabajo organizado por estado, donde el tiempo transcurrido, el establecimiento y el profesional asignado se ven de un vistazo.","ba.b":"Antes","ba.a":"Después","mc.bac":"Desliza para comparar. Los datos de pacientes de la versión anterior están difuminados."});
+  Object.assign(ES,{"mc.bah":"Teleinformes, antes y después","mc.bap":"De una lista genérica de exámenes a un espacio de trabajo organizado por estado, donde el tiempo transcurrido, el establecimiento y el profesional asignado se ven de un vistazo.","ba.b":"Antes","ba.a":"Después","mc.bac":"Desliza para comparar. Todos los datos de pacientes son ficticios."});
   const TITLES = {home:'', work:'Work', 'case-minsal':'Ministry of Health case', 'case-tgr':'National Treasury case', 'case-redsalud':'MiRedSalud case', 'case-futurium':'Futurium case', 'case-conagenda':'ConAgenda case', 'case-cerropoqui':'Cerro Poqui case', approach:'Approach', artefacts:'Artefacts', articles:'Articles', about:'About', contact:'Contact'};
   const nodes=[...document.querySelectorAll('[data-i18n]')];
   const EN={}; nodes.forEach(n=>{ if(!(n.dataset.i18n in EN)) EN[n.dataset.i18n]=n.innerHTML });
