@@ -922,7 +922,7 @@ footer a{color:var(--bg)}
 
 /* before / after */
 .ba-fig{margin:18px 0 0}
-.ba{position:relative;aspect-ratio:2/1;max-width:100%;border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;background:#E8E8E8;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.ba{position:relative;aspect-ratio:2000/1164;max-width:100%;border:1.5px solid var(--ink);border-radius:22px;overflow:hidden;background:#E8E8E8;user-select:none;-webkit-user-select:none;touch-action:pan-y}
 .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none}
 .ba-before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
 .ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(20,20,20,.3);pointer-events:none}
@@ -1279,8 +1279,8 @@ footer a{color:var(--bg)}
       <h3 class="h3s" data-i18n="mc.bah">Teleinformes, before and after</h3>
       <p data-i18n="mc.bap">From a single generic exam list to a workspace organised by status, where time elapsed, establishment and assigned professional are visible at a glance.</p>
       <figure class="ba-fig"><div class="ba" style="--pos:50%">
-        <img class="ba-after" src="assets/img/teleinformes-after.webp" alt="After: ADA, Apoyo Diagnóstico Asistido. Reports grouped by status, with search by establishment and date" loading="lazy">
-        <div class="ba-before"><img src="assets/img/teleinformes-before-v2.webp" alt="Before: the previous DART+ exam list, a single generic table" loading="lazy"></div>
+        <img class="ba-after" src="assets/img/teleinformes-after-v2.webp" alt="After: ADA, Apoyo Diagnóstico Asistido. Reports grouped by status, with search by establishment and date" loading="lazy">
+        <div class="ba-before"><img src="assets/img/teleinformes-before-v3.webp" alt="Before: the previous DART+ exam list, a single generic table" loading="lazy"></div>
         <span class="ba-tag l" data-i18n="ba.b">Before</span><span class="ba-tag r" data-i18n="ba.a">After</span>
         <span class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></span>
         <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after">
