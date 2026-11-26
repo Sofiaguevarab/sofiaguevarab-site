@@ -628,14 +628,15 @@ h1,h2,h3,h4,.logo,.stat b,.tab,.card h3,.mail,.tb-facts b,.stats-light b,.method
 section:nth-of-type(3n+1) .eyebrow::before{background:var(--blue)}
 section:nth-of-type(3n+2) .eyebrow::before{background:var(--sage)}
 .impact .eyebrow{background:transparent;color:var(--bg);border-color:#555}
-/* section tags light up while their section passes the middle of the screen */
-.eyebrow{transform-origin:left center;transition:transform .45s cubic-bezier(.2,.7,.2,1),background-color .35s,color .35s,border-color .35s,box-shadow .35s}
-.eyebrow::before{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+/* section tags: keep their colours, pop and pulse while their section is in the middle of the screen */
+.eyebrow{transform-origin:left center;transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
 .contact .eyebrow{transform-origin:center}
-.eyebrow.is-active{transform:scale(1.12);background:var(--ink);color:var(--bg);box-shadow:4px 4px 0 var(--lime)}
-.eyebrow.is-active::before{transform:scale(1.25);box-shadow:0 0 0 4px rgba(255,255,255,.22)}
-.impact .eyebrow.is-active{background:var(--lime);color:var(--ink);border-color:var(--lime);box-shadow:4px 4px 0 rgba(246,242,234,.25)}
-@media (prefers-reduced-motion:reduce){.eyebrow.is-active{transform:none}.eyebrow.is-active::before{transform:none}}
+.eyebrow.is-active{transform:scale(1.14);box-shadow:4px 4px 0 var(--ink);animation:tagPop .6s cubic-bezier(.34,1.56,.64,1)}
+.eyebrow.is-active::before{animation:dotPulse 1.3s ease-in-out infinite}
+.impact .eyebrow.is-active{box-shadow:4px 4px 0 rgba(246,242,234,.45)}
+@keyframes tagPop{0%{transform:scale(1)}55%{transform:scale(1.22)}100%{transform:scale(1.14)}}
+@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.6)}}
+@media (prefers-reduced-motion:reduce){.eyebrow.is-active{transform:none;animation:none}.eyebrow.is-active::before{animation:none}}
 ::selection{background:var(--lime);color:var(--ink)}
 /* progress */
 #progress{position:fixed;top:0;left:0;height:4px;width:100%;z-index:100;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--coral),var(--lilac),var(--blue),var(--lime))}
