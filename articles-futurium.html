@@ -631,11 +631,11 @@ section:nth-of-type(3n+2) .eyebrow::before{background:var(--sage)}
 /* section tags: keep their colours, pop and pulse while their section is in the middle of the screen */
 .eyebrow{transform-origin:left center;transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .35s}
 .contact .eyebrow{transform-origin:center}
-.eyebrow.is-active{transform:scale(1.14);box-shadow:4px 4px 0 var(--ink);animation:tagPop .6s cubic-bezier(.34,1.56,.64,1)}
+.eyebrow.is-active{transform:scale(1.07);box-shadow:0 6px 18px rgba(20,20,20,.10);animation:tagPop .6s cubic-bezier(.34,1.56,.64,1)}
 .eyebrow.is-active::before{animation:dotPulse 1.3s ease-in-out infinite}
-.impact .eyebrow.is-active{box-shadow:4px 4px 0 rgba(246,242,234,.45)}
-@keyframes tagPop{0%{transform:scale(1)}55%{transform:scale(1.22)}100%{transform:scale(1.14)}}
-@keyframes dotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.6)}}
+.impact .eyebrow.is-active{box-shadow:0 6px 18px rgba(0,0,0,.35);border-color:#8a857c}
+@keyframes tagPop{0%{transform:scale(1)}55%{transform:scale(1.11)}100%{transform:scale(1.07)}}
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.75}}
 @media (prefers-reduced-motion:reduce){.eyebrow.is-active{transform:none;animation:none}.eyebrow.is-active::before{animation:none}}
 ::selection{background:var(--lime);color:var(--ink)}
 /* progress */
