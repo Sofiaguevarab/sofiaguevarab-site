@@ -977,6 +977,86 @@ footer a{color:var(--bg)}
  .olph2,.olph3,.olph4{aspect-ratio:auto}.olph3 img,.olph4 img{aspect-ratio:4/3}.olph2 img{aspect-ratio:16/10}.olph1 img{aspect-ratio:4/3}
  .kdeck{height:300px;overflow:hidden}
 }
+
+/* ===== Articles index + infographic ===== */
+.ar-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.ar-chip{min-height:44px;padding:0 18px;border-radius:99px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:600 14.5px var(--sans);cursor:pointer}
+.ar-chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.ar-chip[data-filter="soon"]{border-style:dashed}
+.ar-feature{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));background:#1B1336;color:#F6F2EA;border:1.5px solid var(--ink);border-radius:32px;overflow:hidden;text-decoration:none;margin-bottom:16px;transition:transform .25s}
+.ar-feature:hover{transform:translateY(-3px);color:#F6F2EA}
+.arf-img{padding:clamp(12px,1.6vw,20px)}.arf-img img{display:block;width:100%;height:auto;border-radius:18px}
+.arf-body{padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px;justify-content:center}
+.arf-tag{align-self:flex-start;font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:#CDB5D1;color:var(--ink);border-radius:99px;padding:5px 12px}
+.arf-h{font:700 clamp(28px,3vw,40px)/1.05 var(--display);letter-spacing:-.035em}
+.arf-h em{font-family:var(--serif);font-weight:400;color:#CDB5D1}
+.arf-p{font-size:16px;color:#E6DEF0}.arf-m{font:500 13px var(--mono);color:#D8D2C6}
+.arf-cta{align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:99px;background:var(--bg);color:var(--ink);font-weight:600}
+.ar-pubs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:28px}
+.ar-pub{display:flex;gap:18px;background:#fff;border:1.5px solid var(--ink);border-radius:26px;padding:16px;text-decoration:none;color:var(--ink);transition:transform .25s}
+.ar-pub:hover{transform:translateY(-3px)}
+.ar-pub img{width:130px;flex:none;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.ar-pub > span{display:flex;flex-direction:column;gap:8px;min-width:0}
+.arp-k{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.arp-h{font:700 21px/1.15 var(--display);letter-spacing:-.02em}.arp-p{font-size:14.5px;color:#2F2D2A}
+.arp-c{margin-top:auto;font-weight:600;font-size:14.5px;border-bottom:1.5px solid var(--ink);align-self:flex-start}
+[data-type][hidden]{display:none!important}
+.view[data-view^="articles-"] .crumb{display:flex;width:max-content;margin-bottom:18px}
+section.oi-block,section.oi-credits{padding-left:0;padding-right:0;padding-bottom:0}section.oi-block{padding-top:0}
+.oi-wrap{display:flex;flex-direction:column;gap:44px}
+.oi-poster{margin:0;display:flex;flex-direction:column;gap:12px}
+.oi-open{all:unset;cursor:zoom-in;display:block;position:relative;background:#1B1336;border:1.5px solid var(--ink);border-radius:32px;padding:clamp(10px,1.6vw,22px)}
+.oi-open:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.oi-open img{display:block;width:100%;height:auto;border-radius:18px}
+.oi-zoom{position:absolute;top:clamp(18px,2.4vw,30px);right:clamp(18px,2.4vw,30px);display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:99px;background:var(--bg);color:var(--ink);border:1.5px solid var(--ink);font:600 14.5px var(--sans)}
+.oi-poster figcaption{font-size:14px;color:var(--muted)}
+.oi-label{margin:0 0 -28px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.oi-block{display:flex;flex-direction:column;gap:20px}
+.oi-block h2{font-size:clamp(28px,3.4vw,42px);letter-spacing:-.035em;line-height:1.05;margin:0}
+.oi-block h2.oi-mini{font:500 12.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.oi-ins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.oi-ins{background:#fff;border:1.5px solid var(--ink);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.oi-tag{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:4px 10px}
+.oi-ins h3{font-size:21px;line-height:1.15;letter-spacing:-.02em;margin:0}
+.oi-ins p{margin:0;font-size:15px;color:#2F2D2A}
+.oi-see{all:unset;cursor:zoom-in;margin-top:auto;align-self:flex-start;font-weight:600;font-size:14px;border-bottom:1.5px solid var(--ink);min-height:32px;display:inline-flex;align-items:center}
+.oi-see:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.oi-hmw{background:#1B1336;color:#F6F2EA;border:1.5px solid var(--ink);border-radius:28px;padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:10px}
+.oi-hmw span{font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#CDB5D1}
+.oi-hmw p{margin:0;font:700 clamp(21px,2.4vw,30px)/1.2 var(--display);letter-spacing:-.02em}
+.oi-stats{background:var(--ink);color:var(--bg);border-radius:32px;padding:clamp(24px,3vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+.oi-stats b{display:block;font:700 56px/1 var(--display);letter-spacing:-.04em;color:#F1D27F}
+.oi-stats p{margin:8px 0 0;font-size:15px;color:#D8D2C6}
+.oi-why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.oi-why{background:#fff;border:1.5px solid var(--ink);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.oi-why.dark{background:#1B1336;color:#F6F2EA}.oi-why.dark p{color:#E6DEF0}.oi-why.dark .oi-n{color:#CDB5D1}
+.oi-n{font:italic 400 30px/1 var(--serif);color:var(--blue)}
+.oi-why h3{font-size:20px;line-height:1.15;letter-spacing:-.02em;margin:0}.oi-why p{margin:0;font-size:15px;color:#2F2D2A}
+.oi-method{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.oi-method div{background:#fff;border:1.5px solid var(--ink);border-radius:22px;padding:18px 20px;font-size:14px}
+.oi-method b{display:block;font:700 44px/1 var(--display);letter-spacing:-.04em;color:var(--teal)}
+.oi-block .chips{display:flex;flex-wrap:wrap;gap:6px}
+.oi-block .chips span{font-size:13px;padding:5px 12px;border-radius:99px;background:#fff;border:1px solid var(--line)}
+.oi-credits{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1.5px solid var(--ink);padding-top:26px}
+.oi-credits > div{flex:1 1 420px}.oi-ck{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.oi-credits p{margin:6px 0 0;font-size:15px}
+.ocv{position:fixed;inset:0;z-index:200;background:#0F0A20;display:flex;flex-direction:column}
+.ocv[hidden]{display:none}
+.ocv-bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px;background:#1B1336;border-bottom:1px solid #3A3150}
+.ocv-bar button{font:600 13.5px var(--sans);cursor:pointer}
+.ocv-close{min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--bg);background:var(--bg);color:var(--ink)}
+.ocv-z{width:44px;height:44px;border-radius:50%;border:1.5px solid #CDB5D1;background:transparent;color:#F6F2EA;font-size:20px!important}
+.ocv-fit{min-height:44px;padding:0 14px;border-radius:99px;border:1.5px solid #CDB5D1;background:transparent;color:#F6F2EA}
+.ocv-pct{font:500 13px var(--mono);color:#E6DEF0;min-width:48px;text-align:center}
+.ocv-sp{flex:1}
+.ocv-ch{min-height:40px;padding:0 14px;border-radius:99px;border:1.5px solid #CDB5D1;background:transparent;color:#F6F2EA}
+.ocv-ch[aria-pressed="true"]{background:#CDB5D1;color:var(--ink)}
+.ocv button:focus-visible{outline:2px solid #F1D27F;outline-offset:2px}
+.ocv-scroll{flex:1;overflow:auto;padding:14px;cursor:grab;-webkit-overflow-scrolling:touch}
+.ocv-scroll.drag{cursor:grabbing;user-select:none}
+.ocv-scroll img{display:block;width:100%;max-width:none;height:auto;margin:0 auto;border-radius:8px;-webkit-user-drag:none}
+.ocv-hint{margin:0;padding:8px 14px;font:500 12px var(--mono);color:#B9AFCB;background:#1B1336}
+@media (max-width:640px){.ar-pub img{width:96px}.oi-zoom{min-height:40px;padding:0 14px;font-size:13px}.ocv-sp{display:none}.ocv-bar{gap:6px}.ocv-ch{min-height:36px;padding:0 10px;font-size:12.5px!important}.oi-stats b{font-size:46px}}
 </style>
 </head>
 <body>
@@ -2057,12 +2137,91 @@ footer a{color:var(--bg)}
     <span class="ghost" aria-hidden="true">read</span>
     <p class="eyebrow" data-i18n="ar.eyebrow">Articles &amp; publications</p>
     <h1 id="ar-h" data-i18n="ar.title">Ideas, <em>in print</em> and in progress.</h1>
-    <p class="lead" data-i18n="ar.lead">Long-form writing on strategic design, futures and AI is on its way. Meanwhile, browse two publications I co-authored — flip through them like a magazine.</p>
+    <p class="lead" data-i18n="ar.lead2">Research artefacts and publications from my projects. Long-form writing on strategic design, futures and AI is on its way.</p>
   </div>
 </section>
-<section style="padding-top:30px" aria-label="Publications">
+<section style="padding-top:20px" aria-label="Articles and publications">
   <div class="wrap">
-    <div class="soon-card reveal"><svg aria-hidden="true"><use href="#sh-ideate" fill="#CDB5D1"/></svg><div><span class="soon" data-i18n="ar.sk">Coming soon</span><h3 data-i18n="ar.sh">We’re working on it: articles on AI in the design process, DesignOps in the public sector and futures thinking.</h3></div></div>
+    <div class="ar-filters" role="group" aria-label="Filter"><button type="button" class="ar-chip" data-filter="all" aria-pressed="true"><span data-i18n="ar.f0">All · 3</span></button><button type="button" class="ar-chip" data-filter="research" aria-pressed="false"><span data-i18n="ar.f1">Research artefacts · 1</span></button><button type="button" class="ar-chip" data-filter="pubs" aria-pressed="false"><span data-i18n="ar.f2">Publications · 2</span></button><button type="button" class="ar-chip" data-filter="soon" aria-pressed="false"><span data-i18n="ar.f3">Articles · soon</span></button></div>
+    <a class="ar-feature reveal" data-type="research" href="articles-futurium">
+      <span class="arf-img"><img src="assets/img/oc-poster.webp" alt="Futurium research infographic" loading="lazy"></span>
+      <span class="arf-body">
+        <span class="arf-tag" data-i18n="ar.ft">New · Research artefact · 2026</span>
+        <span class="arf-h" data-i18n="ar.fh">How Berlin relates to AI, <em>on one poster</em></span>
+        <span class="arf-p" data-i18n="ar.fp">The research and synthesis deliverable for Futurium: 100+ conversations turned into one A1 infographic, now on the wall of Futurium’s offices.</span>
+        <span class="arf-m" data-i18n="ar.fm">71 surveys · 20 interviews · 10 experts · 8 frameworks</span>
+        <span class="arf-cta" data-i18n="ar.fc">Explore the infographic →</span>
+      </span>
+    </a>
+    <div class="ar-pubs">
+      <a class="ar-pub reveal" data-type="pubs" href="articles-kaleidoscope"><img src="assets/pub/fk-01.webp" alt="Futures Kaleidoscope publication cover" loading="lazy" style="aspect-ratio:.707"><span><span class="arp-k" data-i18n="ar.p1k2">Publication · 172 pages</span><span class="arp-h">Futures Kaleidoscope</span><span class="arp-p" data-i18n="ar.p1s">The full process behind the game, from research to the Open Lab Night.</span><span class="arp-c" data-i18n="ar.flip">Flip through →</span></span></a>
+      <a class="ar-pub reveal" data-type="pubs" href="articles-cerropoqui"><img src="assets/pub/cp-01.webp" alt="Cerro Poqui publication cover" loading="lazy" style="aspect-ratio:.773"><span><span class="arp-k" data-i18n="ar.p2k2">Publication · 60 pages · 2021</span><span class="arp-h" data-i18n="ar.p2t">Santuario de la Naturaleza Cerro Poqui</span><span class="arp-p" data-i18n="ar.p2s">Graphic standards, infrastructure and wayfinding for a nature sanctuary.</span><span class="arp-c" data-i18n="ar.flip">Flip through →</span></span></a>
+    </div>
+    <div data-type="soon"><div class="soon-card reveal"><svg aria-hidden="true"><use href="#sh-ideate" fill="#CDB5D1"/></svg><div><span class="soon" data-i18n="ar.sk">Coming soon</span><h3 data-i18n="ar.sh">We’re working on it: articles on AI in the design process, DesignOps in the public sector and futures thinking.</h3></div></div></div>
+  </div>
+</section>
+<div style="height:60px"></div>
+</div>
+
+<div class="view" data-view="articles-futurium">
+<section class="page-head" aria-labelledby="oi-h">
+  <div class="wrap">
+    <a class="crumb" href="articles" data-i18n="ar.back">← All articles &amp; publications</a>
+    <p class="eyebrow" data-i18n="oi.k">Research synthesis · Futurium × SRH Berlin · 2026</p>
+    <h1 id="oi-h" data-i18n="oi.t">How Berlin relates to AI, <em>mapped on one poster</em>.</h1>
+    <p class="lead" data-i18n="oi.l">This A1 infographic was the deliverable of our research and synthesis phase for Futurium. It condenses 100+ conversations about AI literacy, trust and the future into one picture — and today it hangs in Futurium’s offices, where the team uses it to understand the people who visit the museum and its Open Lab Nights.</p>
+  </div>
+</section>
+<section style="padding-top:10px" aria-label="Infographic">
+  <div class="wrap oi-wrap">
+    <figure class="oi-poster reveal">
+      <button type="button" class="oi-open" data-ch="" aria-label="Open the infographic full screen">
+        <img src="assets/img/oc-poster.webp" alt="Infographic “Either we’re good or we’re f***ed”: personas, AI literacy insights, risk climate and a futures cone" loading="lazy">
+        <span class="oi-zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg><span data-i18n="oi.zb">Zoom in</span></span>
+      </button>
+      <figcaption data-i18n="oi.cap">“Either we’re good or we’re f***ed” — A1 poster, 841 × 594 mm. Click to explore it full screen, chapter by chapter — or read the key insights below.</figcaption>
+    </figure>
+
+    <p class="oi-label">01 · <span data-i18n="oi.l1">What we found</span></p>
+    <section class="oi-block reveal" aria-labelledby="oi-ih">
+      <h2 id="oi-ih" data-i18n="oi.ih">Quick insights <em>in one minute</em></h2>
+      <div class="oi-ins-grid"><article class="oi-ins"><span class="oi-tag" style="background:#E6DCEB"><span data-i18n="oi.ai1t">AI literacy</span></span><h3 data-i18n="oi.ai1h">Using AI is not understanding it</h3><p data-i18n="oi.ai1p">Most people can’t explain how AI works, however much they use it, and many underestimate its implications.</p><button type="button" class="oi-see" data-ch="terrain"><span data-i18n="oi.see">See it on the poster →</span></button></article><article class="oi-ins"><span class="oi-tag" style="background:#DDE8DF"><span data-i18n="oi.ai2t">Trust</span></span><h3 data-i18n="oi.ai2h">Trust doesn’t follow use</h3><p data-i18n="oi.ai2p">There is no link between how much people trust AI and how much they use it. The usual relationship is distrustful dependency.</p><button type="button" class="oi-see" data-ch="terrain"><span data-i18n="oi.see">See it on the poster →</span></button></article><article class="oi-ins"><span class="oi-tag" style="background:#F7EBC4"><span data-i18n="oi.ai3t">Curiosity</span></span><h3 data-i18n="oi.ai3h">A curiosity gap</h3><p data-i18n="oi.ai3p">Whatever their opinion, most people don’t want to learn more about AI — out of anxiety or boredom.</p><button type="button" class="oi-see" data-ch="terrain"><span data-i18n="oi.see">See it on the poster →</span></button></article><article class="oi-ins"><span class="oi-tag" style="background:#F6DCD8"><span data-i18n="oi.ai4t">Perception</span></span><h3 data-i18n="oi.ai4h">Background doesn’t decide</h3><p data-i18n="oi.ai4p">Creative, tech, academic or corporate: background didn’t predict perception. Knowing the implications did.</p><button type="button" class="oi-see" data-ch="personas"><span data-i18n="oi.see">See it on the poster →</span></button></article><article class="oi-ins"><span class="oi-tag" style="background:#E6DCEB"><span data-i18n="oi.ai5t">Consent</span></span><h3 data-i18n="oi.ai5h">The illusion of choice</h3><p data-i18n="oi.ai5p">People feel their consent is ignored. Opting out feels impossible, and the pressure to adopt AI keeps rising.</p><button type="button" class="oi-see" data-ch="risk"><span data-i18n="oi.see">See it on the poster →</span></button></article><article class="oi-ins"><span class="oi-tag" style="background:#DDE8DF"><span data-i18n="oi.ai6t">Futures</span></span><h3 data-i18n="oi.ai6h">Bad futures feel closer</h3><p data-i18n="oi.ai6p">Negative outcomes are expected within 5–10 years; positive ones feel like utopias at least 20 years away.</p><button type="button" class="oi-see" data-ch="futures"><span data-i18n="oi.see">See it on the poster →</span></button></article></div>
+      <div class="oi-hmw"><span data-i18n="oi.hk">The opportunity we took into the game</span><p data-i18n="oi.hp">How might we address people’s concerns about AI by having open discussions — making people feel seen and heard, so they can use it more consciously?</p></div>
+      <div class="oi-stats" aria-label="Survey highlights"><div><b>80%</b><p data-i18n="oi.s1">think AI is useful but needs to be carefully managed</p></div><div><b>76%</b><p data-i18n="oi.s2">don’t trust AI to make decisions that affect humans</p></div><div><b>56%</b><p data-i18n="oi.s3">are concerned about how AI may affect their job or studies</p></div></div>
+    </section>
+
+    <p class="oi-label">02 · <span data-i18n="oi.l2">Why it mattered</span></p>
+    <section class="oi-block reveal" aria-labelledby="oi-wh">
+      <h2 id="oi-wh" data-i18n="oi.wh">Why this synthesis <em>mattered</em></h2>
+      <div class="oi-why-grid"><article class="oi-why"><span class="oi-n">01</span><h3 data-i18n="oi.w1h">One shared picture of the visitor</h3><p data-i18n="oi.w1p">Personas like Emma, the critical teacher, and Marc, the enthusiastic adopter, gave Futurium’s team a common language for who walks into the museum — and why.</p></article><article class="oi-why"><span class="oi-n">02</span><h3 data-i18n="oi.w2h">Evidence that shaped the game</h3><p data-i18n="oi.w2p">Most people don’t want to learn more about AI, out of anxiety or boredom, and trust doesn’t track use. So the experience had to be a game, not a lecture.</p></article><article class="oi-why"><span class="oi-n">03</span><h3 data-i18n="oi.w3h">From today’s fears to futures</h3><p data-i18n="oi.w3p">Participants’ predictions for 5, 10 and 20 years became a futures cone — the raw material for the scenarios played at the Open Lab Night.</p></article><article class="oi-why dark"><span class="oi-n">04</span><h3 data-i18n="oi.w4h">Still in use, on the wall</h3><p data-i18n="oi.w4p">Printed at A1, the poster hangs in Futurium’s offices as a reference for planning programmes and Open Lab Nights.</p></article></div>
+    </section>
+
+    <p class="oi-label">03 · <span data-i18n="oi.l3">How we got there</span></p>
+    <section class="oi-block reveal" aria-labelledby="oi-mh">
+      <h2 id="oi-mh" class="oi-mini" data-i18n="oi.mh">Built on</h2>
+      <div class="oi-method">
+        <div><b>71</b><span data-i18n="oi.m1">survey responses</span></div>
+        <div><b>20</b><span data-i18n="oi.m2">in-depth 1:1 interviews</span></div>
+        <div><b>10</b><span data-i18n="oi.m3">expert interviews</span></div>
+        <div><b>2 + 2</b><span data-i18n="oi.m4">AEIOU observations and cultural probes</span></div>
+        <div><b>8</b><span data-i18n="oi.m5">synthesis frameworks</span></div>
+      </div>
+      <div class="chips"><span>STEEPLE analysis</span><span>User personas</span><span>2×2 matrix</span><span>User journey map</span><span>Futures cone</span><span>Stakeholder mapping</span><span>System map</span><span>Reframing matrix</span></div>
+    </section>
+
+    <section class="oi-credits">
+      <div><span class="oi-ck" data-i18n="oi.ck">Team &amp; credits</span><p data-i18n="oi.cp">Valentina Álvarez, Sahana Elango, Sofía Guevara, Rasmus Volden · M.A. Strategic Design, SRH Berlin University of Applied Sciences · Prof. Androschin, Prof. Leihener · Project partner: Futurium</p></div>
+      <a class="btn btn-dark" href="case-futurium" data-i18n="oi.cc">See the Futurium case →</a>
+    </section>
+  </div>
+</section>
+<div style="height:60px"></div>
+</div>
+
+<div class="view" data-view="articles-kaleidoscope">
+<section style="padding-top:36px" aria-label="Publication">
+  <div class="wrap">
+    <a class="crumb" href="articles" data-i18n="ar.back">← All articles &amp; publications</a>
     <article class="pub reveal">
       <div class="pub-meta">
         <p class="eyebrow" data-i18n="ar.p1k">Publication · 2025/2026 · 172 pages</p>
@@ -2076,6 +2235,16 @@ footer a{color:var(--bg)}
           <div class="mag-ctrl"><button class="mag-btn prev" type="button" aria-label="Previous pages">←</button><span class="mag-count" aria-live="polite"></span><button class="mag-btn next" type="button" aria-label="Next pages">→</button></div>
         </div>
     </article>
+    <p class="pub-note" data-i18n="ar.note">Preview of the first 20 pages, shown as double-page spreads like the printed layout. Open the full publication in original quality on Google Drive.</p>
+  </div>
+</section>
+<div style="height:60px"></div>
+</div>
+
+<div class="view" data-view="articles-cerropoqui">
+<section style="padding-top:36px" aria-label="Publication">
+  <div class="wrap">
+    <a class="crumb" href="articles" data-i18n="ar.back">← All articles &amp; publications</a>
     <article class="pub reveal">
       <div class="pub-meta">
         <p class="eyebrow" data-i18n="ar.p2k">Publication · Vol. 17 · December 2021 · 60 pages</p>
@@ -2092,7 +2261,18 @@ footer a{color:var(--bg)}
     <p class="pub-note" data-i18n="ar.note">Preview of the first 20 pages, shown as double-page spreads like the printed layout. Open the full publication in original quality on Google Drive.</p>
   </div>
 </section>
-<div style="height:80px"></div>
+<div style="height:60px"></div>
+</div>
+
+<div id="ocv" class="ocv" role="dialog" aria-modal="true" aria-label="Infographic viewer" hidden>
+  <div class="ocv-bar">
+    <button type="button" class="ocv-close" data-i18n="oi.close">✕ Close</button>
+    <button type="button" class="ocv-z" data-z="-1" aria-label="Zoom out">−</button><span class="ocv-pct">100%</span><button type="button" class="ocv-z" data-z="1" aria-label="Zoom in">+</button>
+    <button type="button" class="ocv-fit" data-i18n="oi.fit">Fit</button>
+    <span class="ocv-sp"></span><button type="button" class="ocv-ch" data-ch="personas" aria-pressed="false">Strange Signals</button><button type="button" class="ocv-ch" data-ch="terrain" aria-pressed="false">New Terrain</button><button type="button" class="ocv-ch" data-ch="risk" aria-pressed="false">Risk Climate</button><button type="button" class="ocv-ch" data-ch="futures" aria-pressed="false">Future Horizon</button>
+  </div>
+  <div class="ocv-scroll"><img src="assets/img/oc-poster-full.webp" alt="Futurium research infographic, full resolution" loading="lazy"></div>
+  <p class="ocv-hint" data-i18n="oi.hint">Scroll or drag to move · pick a chapter to jump to it</p>
 </div>
 
 <!-- ================= ABOUT ================= -->
@@ -2719,7 +2899,8 @@ footer a{color:var(--bg)}
   Object.assign(ES,{"tc.rmc":"Roadmap: Etapa 1 · investigación (2 meses) y Etapa 2 · implementación (5 meses), planificadas semana a semana en 28 sprints. Diseñado en conjunto con la encargada de proyecto, Iliana Medina."});
   Object.assign(ES,{"mc.bah":"Teleinformes, antes y después","mc.bap":"De una lista genérica de exámenes a un espacio de trabajo organizado por estado, donde el tiempo transcurrido, el establecimiento y el profesional asignado se ven de un vistazo.","ba.b":"Antes","ba.a":"Después","mc.bac":"Desliza para comparar. Todos los datos de pacientes son ficticios."});
   Object.assign(ES,{"rs.q":"“Gracias al portal de pacientes que desarrollamos con 2Brains, hemos logrado que el 55% de nuestros pacientes revisen sus resultados médicos a través del portal y ahorrar alrededor de 5 millones de dólares por año”","rs.qr":"Gerente de Servicios Digitales al Paciente, RedSalud CChC"});
-  const TITLES = {home:'', work:'Work', 'case-minsal':'Ministry of Health case', 'case-tgr':'National Treasury case', 'case-redsalud':'MiRedSalud case', 'case-futurium':'Futurium case', 'case-conagenda':'ConAgenda case', 'case-cerropoqui':'Cerro Poqui case', approach:'Approach', artefacts:'Artefacts', articles:'Articles', about:'About', contact:'Contact'};
+  Object.assign(ES,{"ar.lead2": "Artefactos de investigación y publicaciones de mis proyectos. Estoy preparando textos sobre diseño estratégico, futuros e IA.", "ar.f0": "Todo · 3", "ar.f1": "Artefactos de investigación · 1", "ar.f2": "Publicaciones · 2", "ar.f3": "Artículos · pronto", "ar.ft": "Nuevo · Artefacto de investigación · 2026", "ar.fh": "Cómo Berlín se relaciona con la IA, <em>en un póster</em>", "ar.fp": "El entregable de investigación y síntesis para Futurium: más de 100 conversaciones convertidas en una infografía A1, que hoy está en las oficinas de Futurium.", "ar.fm": "71 encuestas · 20 entrevistas · 10 expertos · 8 frameworks", "ar.fc": "Explorar la infografía →", "ar.p1k2": "Publicación · 172 páginas", "ar.p1s": "Todo el proceso detrás del juego, desde la investigación hasta el Open Lab Night.", "ar.flip": "Hojear →", "ar.p2k2": "Publicación · 60 páginas · 2021", "ar.p2s": "Normas gráficas, infraestructura y señalética para un santuario de la naturaleza.", "ar.back": "← Todos los artículos y publicaciones", "oi.ai1t": "Alfabetización en IA", "oi.ai1h": "Usar IA no es entenderla", "oi.ai1p": "La mayoría no sabe explicar cómo funciona la IA, por mucho que la use, y muchos subestiman sus implicancias.", "oi.see": "Verlo en el póster →", "oi.ai2t": "Confianza", "oi.ai2h": "La confianza no sigue al uso", "oi.ai2p": "No hay relación entre cuánto se confía en la IA y cuánto se usa. Lo habitual es una dependencia desconfiada.", "oi.ai3t": "Curiosidad", "oi.ai3h": "Una brecha de curiosidad", "oi.ai3p": "Sea cual sea su opinión, la mayoría no quiere saber más sobre IA, por ansiedad o por aburrimiento.", "oi.ai4t": "Percepción", "oi.ai4h": "La formación no decide", "oi.ai4p": "Creativa, técnica, académica o corporativa: la formación no predijo la percepción. Conocer las implicancias, sí.", "oi.ai5t": "Consentimiento", "oi.ai5h": "La ilusión de elegir", "oi.ai5p": "La gente siente que su consentimiento se ignora. Salirse parece imposible y la presión por adoptar IA sigue creciendo.", "oi.ai6t": "Futuros", "oi.ai6h": "Los futuros malos se sienten más cerca", "oi.ai6p": "Los escenarios negativos se esperan en 5 a 10 años; los positivos parecen utopías a más de 20 años.", "oi.w1h": "Una imagen compartida del visitante", "oi.w1p": "Personas como Emma, la profesora crítica, y Marc, el adoptante entusiasta, le dieron al equipo de Futurium un lenguaje común sobre quién entra al museo y por qué.", "oi.w2h": "Evidencia que dio forma al juego", "oi.w2p": "La mayoría no quiere aprender más sobre IA, por ansiedad o aburrimiento, y la confianza no sigue al uso. Por eso la experiencia tenía que ser un juego, no una charla.", "oi.w3h": "De los miedos de hoy a los futuros", "oi.w3p": "Las predicciones de los participantes a 5, 10 y 20 años se convirtieron en un cono de futuros: la materia prima de los escenarios del Open Lab Night.", "oi.w4h": "Sigue en uso, en la pared", "oi.w4p": "Impreso en A1, el póster cuelga en las oficinas de Futurium como referencia para planificar programas y Open Lab Nights.", "oi.k": "Síntesis de investigación · Futurium × SRH Berlin · 2026", "oi.t": "Cómo Berlín se relaciona con la IA, <em>en un solo póster</em>.", "oi.l": "Esta infografía A1 fue el entregable de nuestra fase de investigación y síntesis para Futurium. Condensa más de 100 conversaciones sobre alfabetización en IA, confianza y futuro en una sola imagen, y hoy está colgada en las oficinas de Futurium, donde el equipo la usa para entender a quienes visitan el museo y sus Open Lab Nights.", "oi.zb": "Ampliar", "oi.cap": "“Either we’re good or we’re f***ed”: póster A1, 841 × 594 mm. Haz clic para explorarlo en pantalla completa, capítulo por capítulo, o lee los insights clave más abajo.", "oi.l1": "Lo que encontramos", "oi.ih": "Insights rápidos <em>en un minuto</em>", "oi.hk": "La oportunidad que llevamos al juego", "oi.hp": "¿Cómo podríamos abordar las preocupaciones de las personas sobre la IA con conversaciones abiertas, para que se sientan vistas y escuchadas y puedan usarla de forma más consciente?", "oi.s1": "cree que la IA es útil, pero que debe gestionarse con cuidado", "oi.s2": "no confía en que la IA tome decisiones que afecten a personas", "oi.s3": "teme cómo la IA puede afectar su trabajo o estudios", "oi.l2": "Por qué importó", "oi.wh": "Por qué esta síntesis <em>importó</em>", "oi.l3": "Cómo llegamos ahí", "oi.mh": "La base", "oi.m1": "respuestas a la encuesta", "oi.m2": "entrevistas 1:1 en profundidad", "oi.m3": "entrevistas a expertos", "oi.m4": "observaciones AEIOU y sondas culturales", "oi.m5": "frameworks de síntesis", "oi.ck": "Equipo y créditos", "oi.cp": "Valentina Álvarez, Sahana Elango, Sofía Guevara, Rasmus Volden · M.A. Strategic Design, SRH Berlin University of Applied Sciences · Prof. Androschin, Prof. Leihener · Partner del proyecto: Futurium", "oi.cc": "Ver el caso Futurium →", "oi.close": "✕ Cerrar", "oi.fit": "Ajustar", "oi.hint": "Desplázate o arrastra para moverte · elige un capítulo para saltar a él"});
+  const TITLES = {home:'', work:'Work', 'case-minsal':'Ministry of Health case', 'case-tgr':'National Treasury case', 'case-redsalud':'MiRedSalud case', 'case-futurium':'Futurium case', 'case-conagenda':'ConAgenda case', 'case-cerropoqui':'Cerro Poqui case', approach:'Approach', artefacts:'Artefacts', articles:'Articles', 'articles-futurium':'Futurium research infographic', 'articles-kaleidoscope':'Futures Kaleidoscope publication', 'articles-cerropoqui':'Cerro Poqui publication', about:'About', contact:'Contact'};
   const nodes=[...document.querySelectorAll('[data-i18n]')];
   const EN={}; nodes.forEach(n=>{ if(!(n.dataset.i18n in EN)) EN[n.dataset.i18n]=n.innerHTML });
   const btn=document.getElementById('lang');
@@ -2741,7 +2922,7 @@ footer a{color:var(--bg)}
   const links=[...document.querySelectorAll('#menu a')];
   const menu=document.getElementById('menu'),mb=document.getElementById('menuBtn');
   const CLEAN=/(^|\.)sofiaguevarab\.(cl|github\.io)$/.test(location.hostname);
-  const BASE=CLEAN?location.pathname.replace(/[^/]*$/,'').replace(/\/(work|approach|artefacts|articles|about|contact|case-[a-z]+)\/$/,'/'):'';
+  const BASE=CLEAN?location.pathname.replace(/[^/]*$/,'').replace(/\/(work|approach|artefacts|articles|about|contact|case-[a-z]+|articles-[a-z]+)\/$/,'/'):'';
   const viewOf=href=>{ if(!href) return null; if(href==='./'||href==='/') return 'home'; const k=href.replace(/^\.?\//,'').replace(/\.html$/,''); return names.includes(k)?k:null; };
   let current=null;
   function show(name,focus){
@@ -2749,7 +2930,7 @@ footer a{color:var(--bg)}
     if(name===current) return;
     current=name;
     views.forEach(v=>v.classList.toggle('active',v.dataset.view===name));
-    const navKey=name.startsWith('case-')?'work':name;
+    const navKey=name.startsWith('case-')?'work':name.startsWith('articles-')?'articles':name;
     links.forEach(l=>viewOf(l.getAttribute('href'))===navKey?l.setAttribute('aria-current','true'):l.removeAttribute('aria-current'));
     document.title=(TITLES[name]?TITLES[name]+' — ':'')+'Sofía Guevara — Strategic Product Designer';
     window.scrollTo(0,0);
@@ -2862,6 +3043,40 @@ footer a{color:var(--bg)}
     b.addEventListener('click',()=>openLb(img)); img.addEventListener('click',()=>openLb(img));
     box.appendChild(b);
   });
+
+
+  // ===== Articles: filters =====
+  (()=>{const chips=[...document.querySelectorAll('.ar-chip')]; if(!chips.length) return;
+    const items=[...document.querySelectorAll('[data-view="articles"] [data-type]')];
+    chips.forEach(c=>c.addEventListener('click',()=>{const f=c.dataset.filter;
+      chips.forEach(x=>x.setAttribute('aria-pressed',String(x===c)));
+      items.forEach(it=>{const t=it.dataset.type; it.hidden=!(f==='all'||f===t||(f!=='all'&&t==='soon'&&f==='soon'));});
+      if(f!=='all'&&f!=='soon') items.filter(i=>i.dataset.type==='soon').forEach(i=>i.hidden=false);
+    }));})();
+  // ===== Infographic viewer =====
+  (()=>{const v=document.getElementById('ocv'); if(!v) return;
+    const sc=v.querySelector('.ocv-scroll'), img=sc.querySelector('img'), pct=v.querySelector('.ocv-pct');
+    const CH={personas:[.17,.6],terrain:[.49,.22],risk:[.49,.82],futures:[.82,.32]};
+    let z=1, ch=null, last=null;
+    const center=()=>{ if(!img.naturalWidth) return; const p=ch?CH[ch]:[.5,.5]; const r=img.getBoundingClientRect(), e=sc.getBoundingClientRect();
+      sc.scrollTo({left:Math.max(0,r.left-e.left+sc.scrollLeft+p[0]*r.width-sc.clientWidth/2), top:Math.max(0,r.top-e.top+sc.scrollTop+p[1]*r.height-sc.clientHeight/2)}); };
+    const apply=()=>{ img.style.width=(z*100)+'%'; pct.textContent=Math.round(z*100)+'%';
+      v.querySelectorAll('.ocv-ch').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ch===ch)));
+      [0,60,250,600].forEach(t=>setTimeout(center,t)); };
+    img.addEventListener('load',center);
+    function open(c){ last=document.activeElement; ch=c||null; z=c?2.6:1; img.loading='eager'; v.hidden=false; document.body.style.overflow='hidden'; apply(); v.querySelector('.ocv-close').focus(); }
+    function close(){ v.hidden=true; document.body.style.overflow=''; if(last) last.focus(); }
+    document.addEventListener('click',e=>{const b=e.target.closest('.oi-open,.oi-see'); if(b){e.preventDefault(); open(b.dataset.ch);} });
+    v.querySelector('.ocv-close').addEventListener('click',close);
+    v.querySelectorAll('.ocv-z').forEach(b=>b.addEventListener('click',()=>{ z=Math.max(1,Math.min(4,z+(+b.dataset.z)*.5)); apply(); }));
+    v.querySelector('.ocv-fit').addEventListener('click',()=>{ z=1; ch=null; apply(); });
+    v.querySelectorAll('.ocv-ch').forEach(b=>b.addEventListener('click',()=>{ ch=b.dataset.ch; z=Math.max(z,2.6); apply(); }));
+    v.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); if(e.key==='Tab'){ const f=[...v.querySelectorAll('button')]; const i=f.indexOf(document.activeElement); if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();} else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus();} } });
+    // drag to pan with mouse
+    let d=null; sc.addEventListener('pointerdown',e=>{ if(e.pointerType!=='mouse') return; d={x:e.clientX,y:e.clientY,l:sc.scrollLeft,t:sc.scrollTop}; sc.classList.add('drag'); });
+    addEventListener('pointermove',e=>{ if(!d) return; sc.scrollLeft=d.l-(e.clientX-d.x); sc.scrollTop=d.t-(e.clientY-d.y); });
+    addEventListener('pointerup',()=>{ d=null; sc.classList.remove('drag'); });
+  })();
 
   // reveal on scroll
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
