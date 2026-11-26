@@ -628,6 +628,14 @@ h1,h2,h3,h4,.logo,.stat b,.tab,.card h3,.mail,.tb-facts b,.stats-light b,.method
 section:nth-of-type(3n+1) .eyebrow::before{background:var(--blue)}
 section:nth-of-type(3n+2) .eyebrow::before{background:var(--sage)}
 .impact .eyebrow{background:transparent;color:var(--bg);border-color:#555}
+/* section tags light up while their section passes the middle of the screen */
+.eyebrow{transform-origin:left center;transition:transform .45s cubic-bezier(.2,.7,.2,1),background-color .35s,color .35s,border-color .35s,box-shadow .35s}
+.eyebrow::before{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.contact .eyebrow{transform-origin:center}
+.eyebrow.is-active{transform:scale(1.12);background:var(--ink);color:var(--bg);box-shadow:4px 4px 0 var(--lime)}
+.eyebrow.is-active::before{transform:scale(1.25);box-shadow:0 0 0 4px rgba(255,255,255,.22)}
+.impact .eyebrow.is-active{background:var(--lime);color:var(--ink);border-color:var(--lime);box-shadow:4px 4px 0 rgba(246,242,234,.25)}
+@media (prefers-reduced-motion:reduce){.eyebrow.is-active{transform:none}.eyebrow.is-active::before{transform:none}}
 ::selection{background:var(--lime);color:var(--ink)}
 /* progress */
 #progress{position:fixed;top:0;left:0;height:4px;width:100%;z-index:100;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--coral),var(--lilac),var(--blue),var(--lime))}
@@ -3077,6 +3085,10 @@ section.oi-block,section.oi-credits{padding-left:0;padding-right:0;padding-botto
     addEventListener('pointermove',e=>{ if(!d) return; sc.scrollLeft=d.l-(e.clientX-d.x); sc.scrollTop=d.t-(e.clientY-d.y); });
     addEventListener('pointerup',()=>{ d=null; sc.classList.remove('drag'); });
   })();
+
+  // section tags: active while they cross the middle band of the screen
+  const tagIO=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('is-active',e.isIntersecting)),{rootMargin:'-30% 0px -45% 0px'});
+  document.querySelectorAll('.eyebrow').forEach(el=>tagIO.observe(el));
 
   // reveal on scroll
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
